@@ -17,21 +17,22 @@ namespace Amod.University.WebApi.Managers.Student
         /// </summary>
         /// <param name="Student">The Student.</param>
         /// <returns>The result of the create Student action.</returns>
-        public CreateStudentResponse Create(CreateStudentRequest request)
+        public CreateStudentResponse CreateStudent(CreateStudentRequest request)
         {
             CreateStudentResponse createStudentResponse = null;
             try
             {
                 createStudentResponse = new CreateStudentResponse() { StudentID = "1", FirstName = request.FirstName, LastName = request.LastName, ResultMessage = request.FirstName + " " + request.LastName + " Enrolled Successfully!" };
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw new Exception(" Error occurred while processing Create Student changeAlertRequest- " + e.Message.ToString());
+                createStudentResponse = new CreateStudentResponse
+                {
+                    ResultMessage = ex.Message
+                };
             }
 
             return createStudentResponse;
-
         }
-
     }
 }

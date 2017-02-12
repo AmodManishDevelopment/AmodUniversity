@@ -14,7 +14,7 @@ namespace Amod.University.WebApi.Managers.Student
         /// </summary>
         /// <param name="Student">The Student.</param>
         /// <returns>The result of the create Student action.</returns>
-        public CreateStudentResponse Create(CreateStudentRequest Student)
+        public CreateStudentResponse CreateStudent(CreateStudentRequest request)
         {
             CreateStudentResponse result;
             string uniqueMessageId = Guid.NewGuid().ToString("N");
@@ -23,18 +23,16 @@ namespace Amod.University.WebApi.Managers.Student
                         result = new CreateStudentResponse
                         {
                             StudentID = "1",
-                            FirstName = Student.FirstName,
-                            LastName = Student.LastName,
-                            ResultMessage = Student.FirstName + " " + Student.LastName + " Enrolled Successfully!"
+                            FirstName = request.FirstName,
+                            LastName = request.LastName,
+                            ResultMessage = request.FirstName + " " + request.LastName + " Enrolled Successfully!"
                         };
             }
-            catch (Exception exception)
+            catch (Exception ex)
             {
                 result = new CreateStudentResponse
                 {
-                    StudentID = "NewStudentId",
-                    FirstName = "None",
-                    ResultMessage = exception.Message
+                    ResultMessage = ex.Message
                 };
             }
 
