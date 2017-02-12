@@ -34,8 +34,8 @@ namespace Amod.University.WebApi.Controllers
         /// </summary>
         /// <param name="request">Create Student Request</param>
         [HttpPost]
-        [Route("StudentRegistration")]
-        public HttpResponseMessage RegisterStudent(CreateStudentRequest request)
+        [Route("CreateStudent")]
+        public HttpResponseMessage CreateStudent(CreateStudentRequest request)
         {
             //Give another chance to re-read from the Pay load
             if (null == request)
@@ -51,7 +51,7 @@ namespace Amod.University.WebApi.Controllers
                 }
             }
 
-            return Request.CreateResponse(HttpStatusCode.Created, _StudentManager.Create(request));
+            return Request.CreateResponse(HttpStatusCode.Created, _StudentManager.CreateStudent(request));
         }
 
         private HttpResponseMessage CreateBadRequestResponse<T>(string validationMessage) where T : BaseResponse, new()

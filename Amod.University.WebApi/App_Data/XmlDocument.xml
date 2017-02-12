@@ -492,7 +492,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Amod.University.WebApi.Controllers.StudentController.RegisterStudent(Amod.University.Model.Request.CreateStudentRequest)">
+        <member name="M:Amod.University.WebApi.Controllers.StudentController.CreateStudent(Amod.University.Model.Request.CreateStudentRequest)">
             <summary>
             Create a New Student
             </summary>
@@ -508,7 +508,7 @@
             The IStudentManager interface.
             </summary>
         </member>
-        <member name="M:Amod.University.WebApi.Managers.Student.IStudentManager.Create(Amod.University.Model.Request.CreateStudentRequest)">
+        <member name="M:Amod.University.WebApi.Managers.Student.IStudentManager.CreateStudent(Amod.University.Model.Request.CreateStudentRequest)">
             <summary>
             Creates the specified Student.
             </summary>
@@ -517,7 +517,7 @@
             The result of the create Student action.
             </returns>
         </member>
-        <member name="M:Amod.University.WebApi.Managers.Student.StudentManager.Create(Amod.University.Model.Request.CreateStudentRequest)">
+        <member name="M:Amod.University.WebApi.Managers.Student.StudentManager.CreateStudent(Amod.University.Model.Request.CreateStudentRequest)">
             <summary>
             Creates the specified Student.
             </summary>
@@ -529,7 +529,7 @@
             The Mock StudentManager class.
             </summary>
         </member>
-        <member name="M:Amod.University.WebApi.Managers.Student.MockStudentManager.Create(Amod.University.Model.Request.CreateStudentRequest)">
+        <member name="M:Amod.University.WebApi.Managers.Student.MockStudentManager.CreateStudent(Amod.University.Model.Request.CreateStudentRequest)">
             <summary>
             Creates the specified Student.
             </summary>
