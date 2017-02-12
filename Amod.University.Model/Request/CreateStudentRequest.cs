@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Amod.University.Model.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,21 +13,21 @@ namespace Amod.University.Model.Request
     /// Student Registeration Request class
     /// </summary>
     [Serializable]
-    [DataContract(Name = "StudentRegistrationRequest", Namespace = "")]
+    [DataContract(Name = "CreateStudentRequest", Namespace = "")]
     public class CreateStudentRequest
     {
         /// <summary>
-        /// Student First Name.
+        /// Student
         /// </summary>
-        [DataMember(Order = 1, Name = "FirstName", EmitDefaultValue = true)]
-        [XmlElement("FirstName")]
-        public string FirstName { get; set; }
+        [DataMember(Order = 1, Name = "Student", EmitDefaultValue = true)]
+        [XmlElement("Student")]
+        public Student Student { get; set; }
 
         /// <summary>
-        /// Student Last Name.
+        /// Student
         /// </summary>
-        [DataMember(Order = 2, Name = "LastName", EmitDefaultValue = true)]
-        [XmlElement("LastName")]
-        public string LastName { get; set; }
+        [DataMember(Order = 2, Name = "EnrollmentNotes", EmitDefaultValue = true)]
+        [XmlElement("EnrollmentNotes")]
+        public string EnrollmentNotes { get; set; }
     }
 }

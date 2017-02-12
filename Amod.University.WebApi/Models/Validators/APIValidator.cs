@@ -19,13 +19,13 @@ namespace Amod.University.WebApi.Models.Validators
             }
             else
             {
-                if (string.IsNullOrWhiteSpace(request.FirstName))
+                if (string.IsNullOrWhiteSpace(request.Student.FirstName))
                 {
                     errorResponseMessage.AppendFormat("Field: FirstName, Issues: {0}",
                       "Student First Name needs to be provided.").AppendLine();
                 }
 
-                if (string.IsNullOrWhiteSpace(request.LastName))
+                if (string.IsNullOrWhiteSpace(request.Student.LastName))
                 {
                     errorResponseMessage.AppendFormat("Field: LastName, Issues: {0}",
                       "Student Last Name needs to be provided.").AppendLine();

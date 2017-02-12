@@ -22,10 +22,10 @@ namespace Amod.University.WebApi.Managers.Student
             {
                         result = new CreateStudentResponse
                         {
-                            StudentID = "1",
-                            FirstName = request.FirstName,
-                            LastName = request.LastName,
-                            ResultMessage = request.FirstName + " " + request.LastName + " Enrolled Successfully!"
+                            StudentID = 1,
+                            FirstName = request.Student.FirstName,
+                            LastName = request.Student.LastName,
+                            ResultMessage = request.Student.FirstName + " " + request.Student.LastName + " Enrolled Successfully!"
                         };
             }
             catch (Exception ex)

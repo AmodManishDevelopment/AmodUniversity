@@ -6,36 +6,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Amod.University.Model.Response
+namespace Amod.University.Model.Entities
 {
     /// <summary>
-    /// The CreateStudentResponse class.
+    /// Student class
     /// </summary>
     [Serializable]
-    [DataContract(Name = "CreateStudentResponse", Namespace = "Amod.University.Model.Response")]
-    [XmlRoot(ElementName = "CreateStudentResponse", Namespace = "Amod.University.Model.Response")]
-    public class CreateStudentResponse : BaseResponse
+    [DataContract(Name = "Student", Namespace = "Amod.University.Model.Entities")]
+    public class Student
     {
         /// <summary>
-        /// ID for new Student 
+        /// Student ID.
         /// </summary>
-        [DataMember(Name = "StudentID")]
+        [DataMember(Order = 1, Name = "StudentID", EmitDefaultValue = true)]
         [XmlElement("StudentID")]
         public int StudentID { get; set; }
 
         /// <summary>
-        /// Student First Name
+        /// Student First Name.
         /// </summary>
-        [DataMember(Name = "FirstName")]
+        [DataMember(Order = 2, Name = "FirstName", EmitDefaultValue = true)]
         [XmlElement("FirstName")]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Student Last Name
+        /// Student First Name.
         /// </summary>
-        [DataMember(Name = "LastName")]
+        [DataMember(Order = 3, Name = "LastName", EmitDefaultValue = true)]
         [XmlElement("LastName")]
         public string LastName { get; set; }
-
     }
 }
