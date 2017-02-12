@@ -22,8 +22,10 @@ namespace Amod.University.WebApi.Managers.Student
             {
                         result = new CreateStudentResponse
                         {
-                            StudentID = "NewStudentId",
-                            FirstName = "None"
+                            StudentID = "1",
+                            FirstName = Student.FirstName,
+                            LastName = Student.LastName,
+                            ResultMessage = Student.FirstName + " " + Student.LastName + " Enrolled Successfully!"
                         };
             }
             catch (Exception exception)
@@ -31,8 +33,8 @@ namespace Amod.University.WebApi.Managers.Student
                 result = new CreateStudentResponse
                 {
                     StudentID = "NewStudentId",
-                    FirstName = "None"
-
+                    FirstName = "None",
+                    ResultMessage = exception.Message
                 };
             }
 
