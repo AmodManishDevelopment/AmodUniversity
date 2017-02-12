@@ -17,12 +17,12 @@ namespace Amod.University.WebApi.Managers.Student
         /// </summary>
         /// <param name="Student">The Student.</param>
         /// <returns>The result of the create Student action.</returns>
-        public CreateStudentResponse Create(CreateStudentRequest Student)
+        public CreateStudentResponse Create(CreateStudentRequest request)
         {
             CreateStudentResponse createStudentResponse = null;
             try
             {
-                createStudentResponse = new CreateStudentResponse() { StudentID = "1", FirstName = "Amod", LastName = "Gadre", ResultMessage = "Student Enrolled Successfully!" };
+                createStudentResponse = new CreateStudentResponse() { StudentID = "1", FirstName = request.FirstName, LastName = request.LastName, ResultMessage = request.FirstName + " " + request.LastName + " Enrolled Successfully!" };
             }
             catch (Exception e)
             {
