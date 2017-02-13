@@ -1,6 +1,8 @@
 ﻿using Amod.University.Model.Request;
 using Amod.University.Model.Response;
 using System;
+using System.Collections.Generic;
+using Amod.University.Model.Entities;
 
 namespace Amod.University.WebApi.Managers.Student
 {
@@ -31,6 +33,39 @@ namespace Amod.University.WebApi.Managers.Student
             catch (Exception ex)
             {
                 result = new CreateStudentResponse
+                {
+                    ResultMessage = ex.Message
+                };
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Gets all Students.
+        /// </summary>
+        /// <returns>The result of the create Student action.</returns>
+        public GetStudentsResponse GetStudents()
+        {
+            GetStudentsResponse result;
+
+            try
+            {
+                List<Model.Entities.Student> students = new List<Model.Entities.Student>();
+                for (int i = 1; i <= 5; i++)
+                {
+                    students.Add(new Model.Entities.Student() { StudentID = i, FirstName = "FirstName" + i.ToString(), LastName = "LastName" + i.ToString() });
+                }
+                     
+                result = new GetStudentsResponse
+                {
+                    Students = students,
+                    ResultMessage = students.Count + " students returned."
+                };
+            }
+            catch (Exception ex)
+            {
+                result = new GetStudentsResponse
                 {
                     ResultMessage = ex.Message
                 };

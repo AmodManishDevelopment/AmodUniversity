@@ -498,6 +498,11 @@
             </summary>
             <param name="request">Create Student Request</param>
         </member>
+        <member name="M:Amod.University.WebApi.Controllers.StudentController.GetStudents">
+            <summary>
+            Gets all Students
+            </summary>
+        </member>
         <member name="T:Amod.University.WebApi.Managers.Student.StudentManager">
             <summary>
             The StudentManager class.
@@ -517,11 +522,25 @@
             The result of the create Student action.
             </returns>
         </member>
+        <member name="M:Amod.University.WebApi.Managers.Student.IStudentManager.GetStudents">
+            <summary>
+            Gets all students.
+            </summary>
+            <returns>
+            The result of the Get Students action.
+            </returns>
+        </member>
         <member name="M:Amod.University.WebApi.Managers.Student.StudentManager.CreateStudent(Amod.University.Model.Request.CreateStudentRequest)">
             <summary>
             Creates the specified Student.
             </summary>
             <param name="Student">The Student.</param>
+            <returns>The result of the create Student action.</returns>
+        </member>
+        <member name="M:Amod.University.WebApi.Managers.Student.StudentManager.GetStudents">
+            <summary>
+            Gets all Students.
+            </summary>
             <returns>The result of the create Student action.</returns>
         </member>
         <member name="T:Amod.University.WebApi.Managers.Student.MockStudentManager">
@@ -535,6 +554,12 @@
             </summary>
             <param name="Student">The Student.</param>
             <returns>The result of the create Student action.</returns>
+        </member>
+        <member name="M:Amod.University.WebApi.Managers.Student.MockStudentManager.GetStudents">
+            <summary>
+            Gets all students.
+            </summary>
+            <returns>The result of the Get Students action.</returns>
         </member>
     </members>
 </doc>

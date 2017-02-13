@@ -16,5 +16,13 @@ namespace Amod.University.WebApi.Managers.Student
         /// The result of the create Student action.
         /// </returns>
         CreateStudentResponse CreateStudent(CreateStudentRequest request);
+
+        /// <summary>
+        /// Gets all students.
+        /// </summary>
+        /// <returns>
+        /// The result of the Get Students action.
+        /// </returns>
+        GetStudentsResponse GetStudents();
     }
 }

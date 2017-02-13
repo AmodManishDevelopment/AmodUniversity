@@ -54,6 +54,17 @@ namespace Amod.University.WebApi.Controllers
             return Request.CreateResponse(HttpStatusCode.Created, _StudentManager.CreateStudent(request));
         }
 
+        /// <summary>
+        /// Gets all Students
+        /// </summary>
+        [HttpGet]
+        [Route("GetStudents")]
+        public HttpResponseMessage GetStudents()
+        {
+            _StudentManager = UniversityServiceLocator.Instance.GetInstance<IStudentManager>();
+            return Request.CreateResponse(HttpStatusCode.OK, _StudentManager.GetStudents());
+        }
+
         private HttpResponseMessage CreateBadRequestResponse<T>(string validationMessage) where T : BaseResponse, new()
         {
             T result = new T
