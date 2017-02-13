@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amod.University.ServiceLoca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amod.University.Model", "Amod.University.Model\Amod.University.Model.csproj", "{590798F5-B742-4861-9B05-44B2EEE3FFD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amod.RestChannelPlatformProvider", "Amod.RestChannelPlatformProvider\Amod.RestChannelPlatformProvider.csproj", "{A114D459-5913-41FA-96C8-08A46A3C54F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amod.University.WebApi.Test", "Amod.University.WebApi.Test\Amod.University.WebApi.Test.csproj", "{0F84F655-5165-4F1F-B0C7-F3C2E8C75096}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{590798F5-B742-4861-9B05-44B2EEE3FFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{590798F5-B742-4861-9B05-44B2EEE3FFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{590798F5-B742-4861-9B05-44B2EEE3FFD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A114D459-5913-41FA-96C8-08A46A3C54F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A114D459-5913-41FA-96C8-08A46A3C54F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A114D459-5913-41FA-96C8-08A46A3C54F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A114D459-5913-41FA-96C8-08A46A3C54F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F84F655-5165-4F1F-B0C7-F3C2E8C75096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F84F655-5165-4F1F-B0C7-F3C2E8C75096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F84F655-5165-4F1F-B0C7-F3C2E8C75096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F84F655-5165-4F1F-B0C7-F3C2E8C75096}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
