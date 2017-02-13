@@ -27,6 +27,15 @@ namespace Amod.University.WebForms
                 "~/Scripts/WebForms/MsAjax/MicrosoftAjaxTimer.js",
                 "~/Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                "~/Scripts/bootstrap.js", 
+                "~/Scripts/DataTables/jquery.dataTables.min.js"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Content/bootstrap.css", 
+                "~/Content/site.css", 
+                "~/Content/DataTables/css/jquery.dataTables.min.css"));
+
             // Use the Development version of Modernizr to develop with and learn from. Then, when you’re
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

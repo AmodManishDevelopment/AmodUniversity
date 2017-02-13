@@ -20,8 +20,8 @@ namespace Amod.University.Model.Response
         /// <summary>
         /// ID for new Student 
         /// </summary>
-        [DataMember(Name = "StudentID")]
-        [XmlElement("StudentID")]
+        [DataMember(Name = "students")]
+        [XmlElement("students")]
         public List<Student> Students { get; set; }
     }
 }
