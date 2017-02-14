@@ -206,6 +206,7 @@
     <Compile Include="Managers\Student\StudentManager.cs" />
     <Compile Include="Managers\Student\IStudentManager.cs" />
     <Compile Include="Managers\Student\MockStudentManager.cs" />
+    <Compile Include="Models\MockData\MockStudents.cs" />
     <Compile Include="Models\Validators\APIValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

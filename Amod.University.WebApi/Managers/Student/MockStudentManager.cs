@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using Amod.University.Model.Entities;
+using Amod.University.WebApi.Models.MockData;
 
 namespace Amod.University.WebApi.Managers.Student
 {
@@ -13,6 +14,7 @@ namespace Amod.University.WebApi.Managers.Student
     /// </summary>
     public class MockStudentManager : IStudentManager
     {
+        List<Model.Entities.Student> students = MockStudents.GetMockStudents(5);
         /// <summary>
         /// Creates the specified Student.
         /// </summary>
@@ -23,8 +25,10 @@ namespace Amod.University.WebApi.Managers.Student
             CreateStudentResponse createStudentResponse = null;
             try
             {
-                createStudentResponse = new CreateStudentResponse() { 
-                    StudentID = 1, 
+                students.Add(new Model.Entities.Student() { StudentID = students.Count + 1, FirstName = request.Student.FirstName, LastName = request.Student.LastName });
+
+                createStudentResponse = new CreateStudentResponse() {
+                    StudentID = students.Count + 1, 
                     FirstName = request.Student.FirstName, 
                     LastName = request.Student.LastName, 
                     ResultMessage = request.Student.FirstName + " " + request.Student.LastName + " Enrolled Successfully!" };
@@ -49,12 +53,6 @@ namespace Amod.University.WebApi.Managers.Student
             GetStudentsResponse getStudentsResponse = null;
             try
             {
-                List<Model.Entities.Student> students = new List<Model.Entities.Student>();
-                for (int i = 1; i <= 5; i++)
-                {
-                    students.Add(new Model.Entities.Student() { StudentID = i, FirstName = "FirstName" + i.ToString(), LastName = "LastName" + i.ToString() });
-                }
-
                 getStudentsResponse = new GetStudentsResponse()
                 {
                     Students = students,

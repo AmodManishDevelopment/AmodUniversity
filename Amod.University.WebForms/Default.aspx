@@ -48,15 +48,11 @@
             GetStudents();
 
             $("#btnCreateStudent").click(function () {
-                //CreateStudent();
-
                 var request = new Object();
                 request.student = new Object();
                 request.student.FirstName = $("#txtFirstName").val();
                 request.student.LastName = $("#txtLastName").val();
                 request.EnrollmentNotes = $("#txtEnrollmentNotes").val();
-
-                //var request = { request: createStudentRequest };
 
                 $.ajax("http://localhost:33472/createstudent", {
                     data: request,
@@ -113,32 +109,6 @@
             });
         }
 
-        //function CreateStudent() {
-        //    var createStudentRequest = new Object();
-        //    createStudentRequest.student = new Object();
-        //    createStudentRequest.student.FirstName = $("#txtFirstName").val();
-        //    createStudentRequest.student.LastName = $("#txtLastName").val();
-        //    createStudentRequest.EnrollmentNotes = $("#txtEnrollmentNotes").val();
-
-        //    var s = JSON.stringify(createStudentRequest);
-
-        //    $.ajax("http://localhost:33472/createstudent", {
-        //        data: JSON.stringify(createStudentRequest),
-        //        type: "POST",
-        //        dataType: "json",
-        //        success: function (result, txt, o) {
-        //            if (txt != 'success') {
-        //                alert(result.message);
-        //            }
-        //            else {
-        //                GetStudents();
-        //            }
-        //        },
-        //        error: function (result, txt, o) {
-        //            alert(result.message);
-        //        }
-        //    });
-        //}
     </script>
 
 </asp:Content>
