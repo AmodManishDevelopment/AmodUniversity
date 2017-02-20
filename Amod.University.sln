@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amod.University.WebApi.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amod.University.WebForms", "Amod.University.WebForms\Amod.University.WebForms.csproj", "{9FDD28B0-FC87-4063-B3C8-AF745DFBA07C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amod.University.Data", "Amod.University.Data\Amod.University.Data.csproj", "{FD62477A-9167-4A2F-A6D5-6B367842065E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amod.University.Data.Test", "Amod.University.Data.Test\Amod.University.Data.Test.csproj", "{5E25F6D3-55BE-421A-8801-F3D424282E1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,14 @@ Global
 		{9FDD28B0-FC87-4063-B3C8-AF745DFBA07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FDD28B0-FC87-4063-B3C8-AF745DFBA07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FDD28B0-FC87-4063-B3C8-AF745DFBA07C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD62477A-9167-4A2F-A6D5-6B367842065E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD62477A-9167-4A2F-A6D5-6B367842065E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD62477A-9167-4A2F-A6D5-6B367842065E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD62477A-9167-4A2F-A6D5-6B367842065E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E25F6D3-55BE-421A-8801-F3D424282E1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E25F6D3-55BE-421A-8801-F3D424282E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E25F6D3-55BE-421A-8801-F3D424282E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E25F6D3-55BE-421A-8801-F3D424282E1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
